@@ -3,15 +3,18 @@
 :root {
   --ink: #0d1526;
   --muted: #616a7d;
-  --line: #e3e6ee;
-  --paper: #ffffff;
-  --sand: #f5f6fa;
-  --navy: #0b1220;
-  --navy-deep: #060a13;
-  --navy-light: #16213a;
-  --gold: #d4af37;
-  --gold-deep: #a5811d;
-  --gold-soft: #f0dfa3;
+  --line: #e6ddc4;
+  --paper: #faf7f0;
+  --sand: #f1eada;
+  --navy: #0f2a40;
+  --navy-deep: #08131f;
+  --navy-light: #0c1e2e;
+  --gold: #f0c24b;
+  --gold-deep: #d4a83c;
+  --gold-soft: #f5d685;
+  --cyan: #3fc5f0;
+  --cyan-deep: #1e88c7;
+  --cyan-soft: #8fb8cc;
 }
 
 @theme inline {
@@ -26,6 +29,9 @@
   --color-gold: var(--gold);
   --color-gold-deep: var(--gold-deep);
   --color-gold-soft: var(--gold-soft);
+  --color-cyan: var(--cyan);
+  --color-cyan-deep: var(--cyan-deep);
+  --color-cyan-soft: var(--cyan-soft);
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-poppins);
 }

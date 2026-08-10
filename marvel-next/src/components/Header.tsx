@@ -66,7 +66,7 @@ export default function Header({ solid = false }: { solid?: boolean }) {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`nav-link font-medium text-[13px] tracking-wide uppercase pb-1 transition-colors max-md:text-ink hover:text-gold-deep ${
+                  className={`nav-link font-medium text-[13px] tracking-wide uppercase pb-1 transition-colors max-md:text-ink hover:text-cyan ${
                     isSolidState ? "text-ink" : "text-white"
                   }`}
                 >
@@ -79,7 +79,7 @@ export default function Header({ solid = false }: { solid?: boolean }) {
 
         <Link
           href="/contact"
-          className="hidden sm:inline-flex items-center rounded-full bg-gradient-to-r from-gold to-gold-deep px-6 py-2.5 font-semibold text-xs tracking-widest uppercase text-navy-deep whitespace-nowrap shadow-[0_6px_18px_rgba(212,175,55,0.35)] transition-all hover:shadow-[0_8px_24px_rgba(212,175,55,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_2px_8px_rgba(212,175,55,0.4)]"
+          className="hidden sm:inline-flex items-center rounded-full bg-cyan px-6 py-2.5 font-semibold text-xs tracking-widest uppercase text-navy-deep whitespace-nowrap shadow-[0_6px_18px_rgba(63,197,240,0.35)] transition-all hover:shadow-[0_8px_24px_rgba(63,197,240,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_2px_8px_rgba(63,197,240,0.4)]"
         >
           Get Quote
         </Link>

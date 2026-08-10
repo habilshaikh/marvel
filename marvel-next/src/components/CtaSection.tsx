@@ -14,7 +14,7 @@ export default function CtaSection() {
         </p>
         <Link
           href="/contact"
-          className="relative overflow-hidden inline-block rounded-full bg-gradient-to-r from-gold to-gold-deep text-navy-deep px-9 py-4 text-xs font-bold tracking-widest uppercase shadow-[0_10px_30px_rgba(212,175,55,0.3)] transition-all hover:shadow-[0_14px_36px_rgba(212,175,55,0.45)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_4px_10px_rgba(212,175,55,0.35)]"
+          className="relative overflow-hidden inline-block rounded-full bg-gradient-to-r from-gold to-gold-deep text-navy-deep px-9 py-4 text-xs font-bold tracking-widest uppercase shadow-[0_10px_30px_rgba(240,194,75,0.35)] transition-all hover:shadow-[0_14px_36px_rgba(212,175,55,0.45)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_4px_10px_rgba(212,175,55,0.35)]"
         >
           Get Free Quote
         </Link>

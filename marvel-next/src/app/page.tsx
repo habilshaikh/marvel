@@ -70,10 +70,10 @@ export default function Home() {
             silence, built for permanence.
           </p>
           <div className="flex gap-5 flex-wrap animate-fade-down" style={{ animationDelay: "0.55s" }}>
-            <RippleLink href="/products" className="rounded-full bg-gradient-to-r from-gold to-gold-deep text-navy-deep px-8.5 py-4 text-xs font-bold tracking-widest uppercase shadow-[0_10px_30px_rgba(212,175,55,0.3)] transition-all hover:shadow-[0_14px_36px_rgba(212,175,55,0.45)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_4px_10px_rgba(212,175,55,0.35)]">
+            <RippleLink href="/products" className="rounded-full bg-gradient-to-r from-cyan to-cyan-deep text-navy-deep px-8.5 py-4 text-xs font-bold tracking-widest uppercase shadow-[0_10px_30px_rgba(63,197,240,0.35)] transition-all hover:shadow-[0_14px_36px_rgba(63,197,240,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_4px_10px_rgba(63,197,240,0.4)]">
               Explore Collection
             </RippleLink>
-            <RippleLink href="/contact" className="rounded-full border border-white/40 text-white px-8.5 py-4 text-xs font-semibold tracking-widest uppercase backdrop-blur-sm transition-all hover:border-gold hover:text-gold hover:-translate-y-0.5">
+            <RippleLink href="/contact" className="rounded-full bg-gradient-to-r from-gold to-gold-deep text-navy-deep px-8.5 py-4 text-xs font-semibold tracking-widest uppercase transition-all hover:shadow-[0_14px_36px_rgba(240,194,75,0.4)] hover:-translate-y-0.5">
               Request Quote
             </RippleLink>
           </div>
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="flex items-center gap-5 rounded-2xl border border-white/15 bg-white/10 px-7 py-5 backdrop-blur-xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.6)] [transform-style:preserve-3d]">
               <div className="flex -space-x-3 [transform:translateZ(30px)]">
                 {["R", "S", "A", "P"].map((n) => (
-                  <div key={n} className="h-10 w-10 rounded-full border-2 border-navy-deep bg-gradient-to-br from-gold to-gold-deep flex items-center justify-center text-navy-deep text-xs font-bold">
+                  <div key={n} className="h-10 w-10 rounded-full border-2 border-navy-deep bg-gradient-to-br from-cyan to-cyan-deep flex items-center justify-center text-navy-deep text-xs font-bold">
                     {n}
                   </div>
                 ))}
@@ -115,7 +115,7 @@ export default function Home() {
       <section className="py-30 px-7">
         <div className="max-w-[1240px] mx-auto">
           <Reveal className="max-w-[640px] mx-auto mb-15 text-center">
-            <div className="flex items-center justify-center gap-3.5 mb-4.5 text-gold text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-gold">
+            <div className="flex items-center justify-center gap-3.5 mb-4.5 text-cyan text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-cyan">
               03 — Why Choose Us
             </div>
             <h2 className="text-[clamp(28px,4vw,42px)] font-bold text-ink font-serif">Built On Quality & Trust</h2>
@@ -127,7 +127,7 @@ export default function Home() {
       <section className="bg-paper py-30 px-7">
         <div className="max-w-[1240px] mx-auto">
           <Reveal className="max-w-[640px] mx-auto mb-15 text-center">
-            <div className="flex items-center justify-center gap-3.5 mb-4.5 text-gold text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-gold">
+            <div className="flex items-center justify-center gap-3.5 mb-4.5 text-cyan text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-cyan">
               04 — Gallery
             </div>
             <h2 className="text-[clamp(28px,4vw,42px)] font-bold text-ink mb-4 font-serif">A Glimpse of Our Work</h2>
@@ -143,7 +143,7 @@ export default function Home() {
       <section className="bg-sand py-30 px-7">
         <div className="max-w-[1240px] mx-auto">
           <Reveal className="max-w-[640px] mx-auto mb-15 text-center">
-            <div className="flex items-center justify-center gap-3.5 mb-4.5 text-gold text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-gold">
+            <div className="flex items-center justify-center gap-3.5 mb-4.5 text-cyan text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-cyan">
               05 — Testimonials
             </div>
             <h2 className="text-[clamp(28px,4vw,42px)] font-bold text-ink font-serif">What Our Clients Say</h2>
@@ -158,7 +158,7 @@ export default function Home() {
                 <StarRating size={13} className="mb-3.5" />
                 <p className="text-muted text-sm mb-5.5 font-light italic">&ldquo;{t.quote}&rdquo;</p>
                 <div className="flex items-center gap-3.5 border-t border-line pt-4.5">
-                  <div className="w-9.5 h-9.5 rounded-full bg-gradient-to-br from-gold to-gold-deep text-navy-deep flex items-center justify-center font-bold text-[13px] shadow-[0_4px_12px_rgba(212,175,55,0.3)]">
+                  <div className="w-9.5 h-9.5 rounded-full bg-gradient-to-br from-cyan to-cyan-deep text-navy-deep flex items-center justify-center font-bold text-[13px] shadow-[0_4px_12px_rgba(107,63,160,0.35)]">
                     {t.initial}
                   </div>
                   <div>
@@ -177,7 +177,7 @@ export default function Home() {
       <section className="py-30 px-7">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-17">
           <Reveal variant="fade-left">
-            <div className="flex items-center gap-3.5 mb-4.5 text-gold text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-gold">
+            <div className="flex items-center gap-3.5 mb-4.5 text-cyan text-xs font-semibold tracking-[3px] uppercase before:content-[''] before:w-8.5 before:h-px before:bg-cyan">
               06 — Contact Us
             </div>
             <h3 className="text-ink text-[26px] mb-4.5 font-bold font-serif">Let&apos;s Build Something Beautiful</h3>
@@ -186,7 +186,7 @@ export default function Home() {
             </p>
             {contactInfo.map(({ Icon, label, value }) => (
               <div key={label} className="flex gap-4 mb-5.5 items-start pb-5.5 border-b border-line">
-                <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-gold to-gold-deep text-navy-deep shrink-0 shadow-[0_6px_16px_rgba(212,175,55,0.3)]">
+                <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan to-cyan-deep text-navy-deep shrink-0 shadow-[0_6px_16px_rgba(107,63,160,0.35)]">
                   <Icon size={18} strokeWidth={1.75} />
                 </div>
                 <div>
