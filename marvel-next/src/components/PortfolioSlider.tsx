@@ -43,14 +43,14 @@ export default function PortfolioSlider() {
       <button
         onClick={() => scroll(-1)}
         aria-label="Previous"
-        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-ink shadow-[0_10px_25px_rgba(13,21,38,0.2)] transition-transform hover:scale-110"
+        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-navy-deep shadow-[0_10px_25px_rgba(0,0,0,0.3)] transition-transform hover:scale-110"
       >
         <ChevronLeft size={22} />
       </button>
       <button
         onClick={() => scroll(1)}
         aria-label="Next"
-        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-ink shadow-[0_10px_25px_rgba(13,21,38,0.2)] transition-transform hover:scale-110"
+        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-navy-deep shadow-[0_10px_25px_rgba(0,0,0,0.3)] transition-transform hover:scale-110"
       >
         <ChevronRight size={22} />
       </button>

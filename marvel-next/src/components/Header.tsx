@@ -32,7 +32,7 @@ export default function Header({ solid = false }: { solid?: boolean }) {
     <header
       className={`fixed top-0 left-0 right-0 z-[100] border-b transition-all duration-300 ${
         isSolidState
-          ? "bg-white/95 border-line shadow-[0_8px_30px_rgba(13,21,38,0.08)] backdrop-blur-md"
+          ? "bg-navy-deep/95 border-line shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md"
           : "bg-gradient-to-b from-navy-deep/60 to-transparent border-transparent"
       }`}
     >
@@ -57,7 +57,7 @@ export default function Header({ solid = false }: { solid?: boolean }) {
 
         <nav>
           <ul
-            className={`flex gap-9 max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:h-screen max-md:w-[270px] max-md:flex-col max-md:justify-center max-md:gap-6 max-md:bg-white max-md:px-6 max-md:shadow-[-10px_0_40px_rgba(13,21,38,0.15)] max-md:transition-transform max-md:duration-300 ${
+            className={`flex gap-9 max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:h-screen max-md:w-[270px] max-md:flex-col max-md:justify-center max-md:gap-6 max-md:bg-navy-deep max-md:px-6 max-md:shadow-[-10px_0_40px_rgba(0,0,0,0.35)] max-md:transition-transform max-md:duration-300 ${
               open ? "max-md:translate-x-0" : "max-md:translate-x-full"
             }`}
           >
