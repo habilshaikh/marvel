@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #f5f5f5;
-  --muted: #9a9a9f;
-  --line: rgba(255, 255, 255, 0.1);
-  --paper: #161618;
-  --sand: #0c0c0e;
-  --navy: #1a1a1d;
-  --navy-deep: #050505;
-  --navy-light: #0c0c0e;
+  --ink: #f5f7fa;
+  --muted: #8fb8cc;
+  --line: rgba(63, 197, 240, 0.18);
+  --paper: #122841;
+  --sand: #0c1e2e;
+  --navy: #0f2a40;
+  --navy-deep: #08131f;
+  --navy-light: #0c1e2e;
   --gold: #f0c24b;
   --gold-deep: #d4a83c;
   --gold-soft: #f5d685;
