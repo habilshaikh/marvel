@@ -83,9 +83,9 @@ export const resources: Resource[] = [
     icon: "package",
     description: "The fountains shown on the Products page and the home page.",
     table: "products",
-    listSql: `SELECT p.id, p.name, p.price, p.badge, p.is_active, c.label AS category,
+    listSql: `SELECT p.id, p.name, p.badge, p.is_active, c.label AS category,
                 (SELECT url FROM product_images i WHERE i.product_id = p.id ORDER BY i.sort_order, i.id LIMIT 1) AS image,
-                CONCAT_WS(' · ', c.label, IF(p.price IS NULL, 'Price on request', CONCAT('₹', FORMAT(p.price, 0, 'en_IN')))) AS info
+                c.label AS info
               FROM products p LEFT JOIN categories c ON c.id = p.category_id ORDER BY p.sort_order, p.id`,
     view: "cards",
     display: { image: "image", title: "name", subtitle: "info", flag: { column: "is_active", on: "Visible", off: "Hidden" } },
@@ -98,9 +98,7 @@ export const resources: Resource[] = [
         nullable: true,
         optionsFrom: { table: "categories", label: "name", orderBy: "sort_order, id" },
       },
-      { name: "price", label: "Price in ₹", type: "number", nullable: true, placeholder: "e.g. 18999", help: "Only numbers, no commas or ₹ sign. Leave empty to show “Price on request”." },
       { name: "badge", label: "Small label on the photo", type: "text", placeholder: "e.g. Bestseller, New, Popular" },
-      { name: "short_desc", label: "Short description", type: "textarea", help: "One line shown on the product card." },
       { name: "description", label: "Full description", type: "textarea", required: true, help: "Shown on the product’s own page." },
       { name: "is_active", label: "Show this product on the website", type: "checkbox", help: "Untick to hide it without deleting it." },
       {
@@ -374,6 +372,7 @@ export const settingGroups: {
     title: "Contact details",
     fields: [
       { k: "contact_phone", label: "Phone number", type: "text", help: "Shown on the Contact page and the home page." },
+      { k: "contact_phone_2", label: "Alternate phone number", type: "text", help: "Optional. Shown next to the main number." },
       { k: "contact_email", label: "Email", type: "text" },
       { k: "contact_email_2", label: "Second email", type: "text", help: "Optional." },
       { k: "whatsapp_number", label: "WhatsApp number", type: "text", help: "With country code, numbers only — e.g. 919825068827. Used for the green WhatsApp button." },

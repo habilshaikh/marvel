@@ -12,11 +12,11 @@ export const metadata: Metadata = { title: "Contact Us | Marvel Fountains" };
 
 export default async function ContactPage() {
   const settings = await getSettings();
-  const phone = settings.contact_phone ?? "";
+  const phones = [settings.contact_phone, settings.contact_phone_2].filter(Boolean) as string[];
   const emails = [settings.contact_email, settings.contact_email_2].filter(Boolean) as string[];
   const contactInfo = [
     { Icon: MapPin, label: "Address", value: settings.contact_address, href: undefined },
-    { Icon: Phone, label: "Phone", value: phone, href: `tel:${phone.replace(/[^\d+]/g, "")}` },
+    ...phones.map((p) => ({ Icon: Phone, label: "Phone", value: p, href: `tel:${p.replace(/[^d+]/g, "")}` })),
     ...emails.map((e) => ({ Icon: Mail, label: "Email", value: e, href: `mailto:${e}` })),
     ...(settings.whatsapp_number
       ? [{ Icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: `https://wa.me/${settings.whatsapp_number}` }]

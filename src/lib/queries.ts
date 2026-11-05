@@ -12,8 +12,6 @@ export type Product = {
   slug: string;
   name: string;
   badge: string;
-  price: string;
-  shortDesc: string;
   desc: string;
   image: string;
   thumbs: string[];
@@ -30,9 +28,6 @@ export type Testimonial = { quote: string; name: string; role: string; initial: 
 export type HeroSlide = { eyebrow: string; title: string; subtitle: string; href: string; video?: string; image?: string };
 export type Block = { value: string; title: string; body: string };
 
-export const formatPrice = (rupees: number | null) =>
-  rupees == null ? "Price on request" : `₹${rupees.toLocaleString("en-IN")}`;
-
 export const getProducts = cache(async (): Promise<Product[]> => {
   const [rows, images, specs] = await Promise.all([
     query<{
@@ -40,12 +35,10 @@ export const getProducts = cache(async (): Promise<Product[]> => {
       slug: string;
       name: string;
       badge: string;
-      price: number | null;
-      short_desc: string;
       description: string;
       label: string | null;
     }>(
-      `SELECT p.id, p.slug, p.name, p.badge, p.price, p.short_desc, p.description, c.label
+      `SELECT p.id, p.slug, p.name, p.badge, p.description, c.label
        FROM products p LEFT JOIN categories c ON c.id = p.category_id
        WHERE p.is_active = 1 ORDER BY p.sort_order, p.id`
     ),
@@ -64,8 +57,6 @@ export const getProducts = cache(async (): Promise<Product[]> => {
       slug: r.slug,
       name: r.name,
       badge: r.badge,
-      price: formatPrice(r.price),
-      shortDesc: r.short_desc,
       desc: r.description,
       image: thumbs[0] ?? "/logo.png",
       thumbs,

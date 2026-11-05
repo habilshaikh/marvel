@@ -46,11 +46,11 @@ export default async function Footer() {
           <p className="text-[16px] font-medium">{settings.footer_tagline}</p>
           <div className="mt-4 space-y-1.5 text-[14px]">
             {settings.contact_address && <p>{settings.contact_address}</p>}
-            {settings.contact_phone && (
-              <a href={`tel:${settings.contact_phone.replace(/[^\d+]/g, "")}`} className="block hover:text-gold-deep transition-colors">
-                {settings.contact_phone}
+            {[settings.contact_phone, settings.contact_phone_2].filter(Boolean).map((p) => (
+              <a key={p} href={`tel:${p!.replace(/[^d+]/g, "")}`} className="block hover:text-gold-deep transition-colors">
+                {p}
               </a>
-            )}
+            ))}
             {[settings.contact_email, settings.contact_email_2].filter(Boolean).map((e) => (
               <a key={e} href={`mailto:${e}`} className="block hover:text-gold-deep transition-colors">
                 {e}

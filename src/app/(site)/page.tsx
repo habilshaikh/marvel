@@ -40,7 +40,7 @@ export default async function Home() {
     getTestimonials(true),
     getSettings(),
   ]);
-  const phone = settings.contact_phone ?? "";
+  const phones = [settings.contact_phone, settings.contact_phone_2].filter(Boolean) as string[];
 
   return (
     <>
@@ -187,11 +187,13 @@ export default async function Home() {
                 Get in touch
               </Link>
             </li>
-            <li>
-              <a href={`tel:${phone.replace(/[^\d+]/g, "")}`} className="arrow-link text-ink transition-colors hover:text-gold">
-                {phone}
-              </a>
-            </li>
+            {phones.map((p) => (
+              <li key={p}>
+                <a href={`tel:${p.replace(/[^d+]/g, "")}`} className="arrow-link text-ink transition-colors hover:text-gold">
+                  {p}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </section>

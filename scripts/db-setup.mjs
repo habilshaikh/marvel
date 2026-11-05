@@ -36,6 +36,7 @@ try {
     const dir = new URL("../database/", import.meta.url);
     await conn.query(await readFile(new URL("schema.sql", dir), "utf8"));
     await conn.query(await readFile(new URL("seed.sql", dir), "utf8"));
+    await conn.query(await readFile(new URL("migrations/2026-11-client-changes.sql", dir), "utf8"));
 
     const username = env.ADMIN_USERNAME || "admin";
     const generated = !env.ADMIN_PASSWORD;

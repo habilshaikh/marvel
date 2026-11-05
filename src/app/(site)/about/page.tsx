@@ -156,7 +156,7 @@ export default async function AboutPage() {
               <div className="relative mx-auto aspect-[4/5] max-w-[440px] overflow-hidden rounded-2xl">
                 <Image
                   src={settings.about_image ?? ""}
-                  alt="Elegant tiered garden fountain"
+                  alt="Marvel Fountains at work"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-[1600ms] hover:scale-[1.05]"

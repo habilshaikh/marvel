@@ -2,11 +2,11 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import { getClientLogos } from "@/lib/queries";
 
-function LogoRow({ items, reverse }: { items: string[]; reverse?: boolean }) {
+function LogoRow({ items }: { items: string[] }) {
   // Track holds the list twice so the -50% translate loops seamlessly
   return (
     <div className="group flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
-      <div className={`flex w-max shrink-0 gap-5 py-2 group-hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}>
+      <div className={`flex w-max shrink-0 gap-5 py-2 group-hover:[animation-play-state:paused] animate-marquee`}>
         {[...items, ...items].map((src, i) => (
           <div
             key={`${src}-${i}`}
@@ -23,8 +23,6 @@ function LogoRow({ items, reverse }: { items: string[]; reverse?: boolean }) {
 
 export default async function ClientsSection() {
   const logos = await getClientLogos();
-  const half = Math.ceil(logos.length / 2);
-  const rows = [logos.slice(0, half), logos.slice(half)];
 
   return (
     <section className="relative overflow-hidden bg-sand py-24 max-md:py-16">
@@ -45,9 +43,8 @@ export default async function ClientsSection() {
           condition.
         </p>
       </Reveal>
-      <div className="relative z-[1] flex flex-col gap-5">
-        <LogoRow items={rows[0]} />
-        <LogoRow items={rows[1]} reverse />
+      <div className="relative z-[1]">
+        <LogoRow items={logos} />
       </div>
     </section>
   );

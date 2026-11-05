@@ -35,7 +35,7 @@ export default async function ProductDetailPage({
   if (!product) notFound();
 
   const related = await getRelatedProducts(slug, 3);
-  // Mobile: the short description is a big grey lead-in, the full description follows as statements
+  // Mobile: the description is shown as separate statements
   const paragraphs = product.desc.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
 
   return (
@@ -67,18 +67,10 @@ export default async function ProductDetailPage({
               </div>
             )}
             <h1 className="text-[clamp(28px,3.6vw,40px)] font-bold text-ink mb-4 font-serif max-md:mb-6 max-md:text-center max-md:text-[46px] max-md:leading-[1.02] max-md:tracking-[-0.035em]">{product.name}</h1>
-            <div className="flex items-baseline gap-3.5 mb-6 max-md:justify-center">
-              <span className="font-serif text-[30px] font-bold text-gold-deep max-md:text-[22px] max-md:font-semibold">{product.price}</span>
-            </div>
             <p className="text-muted font-light mb-7.5 whitespace-pre-line max-md:hidden">{product.desc}</p>
 
             {/* Mobile: Fontana-style statements */}
             <div className="md:hidden">
-              {product.shortDesc && (
-                <p className="py-12 text-center text-[32px] leading-[1.2] tracking-[-0.025em] text-muted/70">
-                  {product.shortDesc}
-                </p>
-              )}
               {paragraphs.map((p, i) => (
                 <p key={i} className="whitespace-pre-line py-8 text-[25px] leading-[1.25] tracking-[-0.02em] text-ink">
                   {p}

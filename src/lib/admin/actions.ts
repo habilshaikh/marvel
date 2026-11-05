@@ -43,7 +43,6 @@ export async function saveRecord(key: string, id: number | null, _prev: FormStat
     if (f.type === "number") {
       const n = Number(raw);
       if (!Number.isInteger(n) || n < -32768 || n > 4294967295) return { error: `“${f.label}” should be a number only (no commas or symbols).` };
-      if (f.name === "price" && n < 0) return { error: "Price cannot be negative." };
       values[f.name] = n;
     } else if (f.type === "select") {
       const allowed = await getOptions(f);

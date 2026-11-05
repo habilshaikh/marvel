@@ -29,10 +29,8 @@ export default function ProductCard({ product, delay = 0 }: { product: Product; 
             <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent pointer-events-none" />
           </div>
           <div className="flex flex-1 flex-col p-3.5 sm:p-7 [transform:translateZ(20px)]">
-            <h3 className="text-[16px] leading-tight sm:text-[18px] text-ink mb-1.5 sm:mb-2.5 font-medium">{product.name}</h3>
-            <p className="text-muted text-[13px] sm:text-[15px] flex-1 mb-3 sm:mb-5 font-light line-clamp-2 sm:line-clamp-none">{product.shortDesc}</p>
-            <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 pt-3 sm:pt-4.5 border-t border-line">
-              <span className="font-semibold text-navy text-[16px]">{product.price}</span>
+            <h3 className="text-[16px] leading-tight sm:text-[18px] text-ink mb-3 sm:mb-5 font-medium">{product.name}</h3>
+            <div className="mt-auto flex items-center justify-end pt-3 sm:pt-4.5 border-t border-line">
               <span className="text-gold-deep font-semibold text-[10.5px] sm:text-xs tracking-wide uppercase flex items-center gap-1 group-hover:gap-2 transition-all">
                 View Product <ArrowRight size={13} />
               </span>
